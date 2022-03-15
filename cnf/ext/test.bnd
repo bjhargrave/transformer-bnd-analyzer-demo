@@ -1,0 +1,26 @@
+junit_jupiter_version: 5.8.2
+junit_platform_version: 1.8.2
+assertj_version: 3.22.0
+mockito_version: 4.4.0
+bytebuddy_version: 1.12.8
+osgi_test_version: 1.1.0
+
+junit: \
+	junit-platform-commons;version=latest,\
+	junit-platform-engine;version=latest,\
+	assertj-core;version=latest,\
+	org.opentest4j;version=latest,\
+	org.apiguardian:apiguardian-api;version=latest,\
+	junit-jupiter-api;version=latest,\
+	junit-jupiter-engine;version=latest,\
+	junit-jupiter-params;version=latest
+
+mockito: org.mockito.mockito-core;version=latest,\
+	net.bytebuddy.byte-buddy;version=latest,\
+	org.objenesis;version=latest
+-runsystempackages.objenesis: sun.misc,sun.reflect
+
+osgitest: \
+	org.osgi.test.common;version=latest,\
+	org.osgi.test.junit5;version=latest,\
+	org.osgi.test.assertj.framework;version=latest
