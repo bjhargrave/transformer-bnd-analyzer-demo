@@ -1,3 +1,5 @@
 Bundle-Description: OSGi Testing Example Transformed API
 
 Bundle-SymbolicName: ${p}.transformed
+
+-transformer: true

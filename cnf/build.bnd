@@ -19,3 +19,7 @@ Bundle-Vendor: OSGi Working Group
 -sources: false
 
 -buildpath.annotation: osgi.annotation;version=latest;maven-scope=provided
+
+-plugin.transformer: aQute.bnd.service.AnalyzerPlugin;\
+ name=JakartaTransformerPlugin;\
+ command:="-transformer"

@@ -26,3 +26,6 @@ org.slf4j:slf4j-api:1.7.22
 org.eclipse.platform:org.eclipse.osgi:3.17.100
 org.osgi:org.osgi.util.function:1.2.0
 org.osgi:org.osgi.util.promise:1.2.0
+
+# Transformer Bnd Analyzer Plugin
+org.eclipse.transformer:org.eclipse.transformer.bnd.analyzer:0.3.0-SNAPSHOT
