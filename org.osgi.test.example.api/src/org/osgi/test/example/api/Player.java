@@ -18,8 +18,13 @@
 
 package org.osgi.test.example.api;
 
+import javax.annotation.Priority;
+import javax.inject.Named;
+
+@Priority(20)
 public interface Player {
 
+	@Named("ball")
 	Ball getBall();
 
 	void kickBall();

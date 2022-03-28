@@ -18,33 +18,25 @@
 
 package org.osgi.test.example.player.impl;
 
-import javax.enterprise.concurrent.AbortedException;
-import javax.enterprise.concurrent.ManageableThread;
+import jakarta.enterprise.concurrent.ManageableThread;
 
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.osgi.test.example.api.Ball;
-import org.osgi.test.example.api.Player;
 
 @Component
-public class PlayerImpl implements Player {
-	@Reference
-	Ball ball;
-	@Reference
-	ManageableThread	thread;
-
+public class BallImpl implements Ball, ManageableThread {
 	@Override
-	public void kickBall() {
-		thread.isShutdown();
-		try {
-			ball.kick();
-		} catch (AbortedException e) {
-			e.printStackTrace();
-		}
+	public void inflate() {
+
 	}
 
 	@Override
-	public Ball getBall() {
-		return ball;
+	public void kick() {
+
+	}
+
+	@Override
+	public boolean isShutdown() {
+		return false;
 	}
 }

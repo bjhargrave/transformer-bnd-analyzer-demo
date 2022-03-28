@@ -18,8 +18,8 @@
 
 package org.osgi.test.example.player.impl;
 
-import javax.enterprise.concurrent.AbortedException;
-import javax.enterprise.concurrent.ManageableThread;
+import jakarta.enterprise.concurrent.AbortedException;
+import jakarta.enterprise.concurrent.ManageableThread;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;

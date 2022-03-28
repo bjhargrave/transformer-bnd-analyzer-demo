@@ -1,12 +1,12 @@
 # Set javac settings from JDT prefs
 -include: ${workspace}/cnf/includes/jdt.bnd
 
-Bundle-Description: OSGi Testing Example Player Implementation
+Bundle-Description: OSGi Testing Example Transformed Player Implementation
 
 -buildpath: \
-	jakarta.platform:jakarta.jakartaee-api;version=8.0,\
+	jakarta.platform:jakarta.jakartaee-api;version=9.0,\
 	org.osgi.service.component.annotations;version=1.4.0,\
-	org.osgi.test.example.api;version=snapshot
+	org.osgi.test.example.api.transformed;version=snapshot
 
 -testpath: \
 	${junit},\

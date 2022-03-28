@@ -18,33 +18,27 @@
 
 package org.osgi.test.example.player.impl;
 
-import javax.enterprise.concurrent.AbortedException;
-import javax.enterprise.concurrent.ManageableThread;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoInteractions;
 
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
+import jakarta.enterprise.concurrent.ManageableThread;
+
+import org.junit.jupiter.api.Test;
 import org.osgi.test.example.api.Ball;
-import org.osgi.test.example.api.Player;
 
-@Component
-public class PlayerImpl implements Player {
-	@Reference
-	Ball ball;
-	@Reference
-	ManageableThread	thread;
+public class OpenBoxTest {
 
-	@Override
-	public void kickBall() {
-		thread.isShutdown();
-		try {
-			ball.kick();
-		} catch (AbortedException e) {
-			e.printStackTrace();
-		}
+	@Test
+	void myTest() throws Exception {
+		PlayerImpl p = new PlayerImpl();
+		p.ball = mock(Ball.class);
+		p.thread = mock(ManageableThread.class);
+		assertThat(p.getBall()).isNotNull();
+		verifyNoInteractions(p.getBall());
+		p.kickBall();
+		verify(p.getBall()).kick();
 	}
 
-	@Override
-	public Ball getBall() {
-		return ball;
-	}
 }

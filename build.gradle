@@ -9,3 +9,13 @@ subprojects {
 		}
 	}
 }
+
+tasks.register("buildscriptDependencies") {
+	doLast {
+		println "Java version:  ${JavaVersion.current()}"
+		println "Bnd version:   ${About.getBndVersion()}"
+		println "bnd_version:   ${bnd_version}"
+		println "bnd_snapshots: ${bnd_snapshots}"
+		println buildscript.configurations.classpath.asPath
+	}
+}

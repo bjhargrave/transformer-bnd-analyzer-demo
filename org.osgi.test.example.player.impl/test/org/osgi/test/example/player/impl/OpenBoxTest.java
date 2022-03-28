@@ -23,15 +23,18 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 
+import javax.enterprise.concurrent.ManageableThread;
+
 import org.junit.jupiter.api.Test;
 import org.osgi.test.example.api.Ball;
 
 public class OpenBoxTest {
 
 	@Test
-	void myTest() {
+	void myTest() throws Exception {
 		PlayerImpl p = new PlayerImpl();
 		p.ball = mock(Ball.class);
+		p.thread = mock(ManageableThread.class);
 		assertThat(p.getBall()).isNotNull();
 		verifyNoInteractions(p.getBall());
 		p.kickBall();

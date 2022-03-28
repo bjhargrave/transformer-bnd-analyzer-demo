@@ -18,10 +18,13 @@
 
 package org.osgi.test.example.api;
 
+import javax.annotation.Priority;
+import javax.enterprise.concurrent.AbortedException;
+
+@Priority(10)
 public interface Ball {
 
 	void inflate();
 
-	void kick();
-	
+	void kick() throws AbortedException;
 }
