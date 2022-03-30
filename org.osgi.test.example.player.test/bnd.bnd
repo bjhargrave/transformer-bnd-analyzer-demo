@@ -9,6 +9,7 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	org.osgi.test.example.player.impl
 
 -buildpath: \
+	jakarta.platform:jakarta.jakartaee-api;version=8.0,\
 	osgi.core;version=8.0.0;maven-scope=provided,\
 	org.osgi.namespace.service;version=1.0.0;maven-scope=provided,\
 	org.osgi.test.example.api;version=snapshot,\

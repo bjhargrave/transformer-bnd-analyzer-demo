@@ -26,6 +26,8 @@ import static org.mockito.Mockito.verifyNoInteractions;
 import java.util.Dictionary;
 import java.util.List;
 
+import javax.enterprise.concurrent.AbortedException;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -64,7 +66,7 @@ public class PlayerTest {
 	Player p;
 
 	@Test
-	void myTest() {
+	void myTest() throws Exception {
 		assertThat(p).isNotNull();
 		assertThat(p.getBall()).isSameAs(b);
 		verifyNoInteractions(b);
@@ -79,7 +81,7 @@ public class PlayerTest {
 		}
 
 		@Override
-		public void kick() {
+		public void kick() throws AbortedException {
 		}
 	}
 
