@@ -2,4 +2,4 @@ Bundle-Description: OSGi Testing Example Transformed API
 
 Bundle-SymbolicName: ${p}.transformed
 
--transformer: true
+-transformer: immediate;option=tv;package=org.osgi.test.example.api;version="[2.0\\,3.0);Export-Package=2.0.0"
