@@ -31,4 +31,4 @@ jakarta.platform:jakarta.jakartaee-api:8.0.0
 jakarta.platform:jakarta.jakartaee-api:9.0.0
 
 # Transformer Bnd Analyzer Plugin
-org.eclipse.transformer:org.eclipse.transformer.bnd.analyzer:0.3.0-SNAPSHOT
+org.eclipse.transformer:org.eclipse.transformer.bnd.analyzer:0.4.0-SNAPSHOT
