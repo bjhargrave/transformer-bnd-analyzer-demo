@@ -20,6 +20,12 @@ Bundle-Vendor: OSGi Working Group
 
 -buildpath.annotation: osgi.annotation;version=latest;maven-scope=provided
 
--plugin.transformer: aQute.bnd.service.AnalyzerPlugin;\
- name=JakartaTransformerPlugin;\
+# Transform after populating bundle content but before manifest generation.
+#-plugin.transformer.analyzer: aQute.bnd.service.AnalyzerPlugin;\
+# name=JakartaTransformer;\
+# command:="-transformer"
+
+# Transform after bundle is complete.
+-plugin.transformer.verifier: aQute.bnd.service.verifier.VerifierPlugin;\
+ name=JakartaTransformer;\
  command:="-transformer"
