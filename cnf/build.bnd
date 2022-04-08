@@ -2,16 +2,14 @@
 -groupid: org.osgi.test.example
 -pom: version=${versionmask;===s;${@version}}
 
-# Uncomment the following line to build the non-snapshot version.
-#-snapshot:
-Bundle-Version: 0.1.0-SNAPSHOT
+Bundle-Version: 1.0.0
 # Don't baseline Bundle-Version
--diffignore:            Bundle-Version
+-diffignore: Bundle-Version
 
-Bundle-DocURL: https://www.osgi.org
+Bundle-DocURL: https://github.com/bjhargrave/transformer-bnd-analyzer-demo
 Bundle-License: "Apache-2.0";link="https://opensource.org/licenses/Apache-2.0";description="Apache License, Version 2.0"
 Bundle-Name: ${-groupid}:${project.name}
-Bundle-Vendor: OSGi Working Group
+Bundle-Vendor: Eclipse Foundation
 
 -reproducible: true
 -noextraheaders: true

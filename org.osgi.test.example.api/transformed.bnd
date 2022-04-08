@@ -1,6 +1,19 @@
+# Set bundle values for the transformed artifact
 Bundle-Description: OSGi Testing Example Transformed API
-
 Bundle-SymbolicName: ${p}.transformed
 
--transformer: immediate;option=renames;package=org.osgi.test.example.api;rename=org.osgi.test.example.api,\
+# "bundles" with no key/values turns off default bundles rules since we control
+# the bundle values above.
+-transformer.bundles: bundles
+
+# Change version of package. We must also "rename" the package to itself
+# so its version can be changed.
+-transformer: \
+  immediate;option=renames;package=org.osgi.test.example.api;rename=org.osgi.test.example.api,\
   immediate;option=versions;package=org.osgi.test.example.api;version="[2.0\\,3.0);Export-Package=2.0.0"
+
+# POM transformation:
+# Map Jakarta EE API dependency to a different version in the generated pom
+# The key is the GAV to replace and the values are the replacement.
+-maven-dependencies.jakarta: jakarta.platform:jakarta.jakartaee-api:8.0.0;\
+ groupId=jakarta.platform;artifactId=jakarta.jakartaee-api;version=9.0.0;scope=provided
