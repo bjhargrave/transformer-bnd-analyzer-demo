@@ -4,8 +4,8 @@
 Bundle-Description: OSGi Testing Example Player Implementation
 
 -buildpath: \
-	jakarta.platform:jakarta.jakartaee-api;version=8.0,\
-	org.osgi.service.component.annotations;version=1.4.0,\
+	jakarta.platform:jakarta.jakartaee-api;version=8.0;maven-scope=provided,\
+	org.osgi.service.component.annotations;version=1.4.0;maven-scope=provided,\
 	org.osgi.test.example.api;version=snapshot
 
 -testpath: \
