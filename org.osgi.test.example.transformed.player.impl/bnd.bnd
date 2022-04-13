@@ -6,7 +6,7 @@ Bundle-Description: OSGi Testing Example Transformed Player Implementation
 -buildpath: \
 	jakarta.platform:jakarta.jakartaee-api;version=9.0,\
 	org.osgi.service.component.annotations;version=1.4.0,\
-	org.osgi.test.example.api.transformed;version=snapshot;source=none
+	org.osgi.test.example.api.transformed;version=snapshot
 
 -testpath: \
 	${junit},\
