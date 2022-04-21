@@ -16,6 +16,9 @@ Bundle-Vendor: Eclipse Foundation
 -noimportjava: true
 -sources: false
 
+# Decorate -buildpath references to io.osgi.test.example.api Bundle-SymbolicName
+-buildpath+: {io.osgi.test.example.api};project=org.osgi.test.example.api
+
 -buildpath.annotation: osgi.annotation;version=latest;maven-scope=provided
 
 # Transform after populating bundle content but before manifest generation.

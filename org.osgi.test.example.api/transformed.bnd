@@ -1,6 +1,6 @@
 # Set bundle values for the transformed artifact
 Bundle-Description: OSGi Testing Example Transformed API
-Bundle-SymbolicName: ${p}.transformed
+Bundle-SymbolicName: io.osgi.test.example.api
 
 # "bundles" with no key/values turns off default bundles rules since we control
 # the bundle values above.

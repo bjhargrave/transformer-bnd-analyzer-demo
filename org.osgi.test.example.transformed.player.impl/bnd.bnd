@@ -6,7 +6,7 @@ Bundle-Description: OSGi Testing Example Transformed Player Implementation
 -buildpath: \
 	jakarta.platform:jakarta.jakartaee-api;version=9.0;maven-scope=provided,\
 	org.osgi.service.component.annotations;version=1.4.0;maven-scope=provided,\
-	org.osgi.test.example.api.transformed;version=snapshot
+	io.osgi.test.example.api;version=snapshot
 
 -testpath: \
 	${junit},\
