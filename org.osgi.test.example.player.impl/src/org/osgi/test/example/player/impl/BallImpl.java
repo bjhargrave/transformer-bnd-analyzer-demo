@@ -18,6 +18,7 @@
 
 package org.osgi.test.example.player.impl;
 
+import javax.enterprise.concurrent.AbortedException;
 import javax.enterprise.concurrent.ManageableThread;
 
 import org.osgi.service.component.annotations.Component;
@@ -31,7 +32,7 @@ public class BallImpl implements Ball, ManageableThread {
 	}
 
 	@Override
-	public void kick() {
+	public void kick() throws AbortedException {
 
 	}
 

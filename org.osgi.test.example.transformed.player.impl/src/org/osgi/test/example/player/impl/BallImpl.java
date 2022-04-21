@@ -18,10 +18,11 @@
 
 package org.osgi.test.example.player.impl;
 
-import jakarta.enterprise.concurrent.ManageableThread;
-
 import org.osgi.service.component.annotations.Component;
 import org.osgi.test.example.api.Ball;
+
+import jakarta.enterprise.concurrent.AbortedException;
+import jakarta.enterprise.concurrent.ManageableThread;
 
 @Component
 public class BallImpl implements Ball, ManageableThread {
@@ -31,7 +32,7 @@ public class BallImpl implements Ball, ManageableThread {
 	}
 
 	@Override
-	public void kick() {
+	public void kick() throws AbortedException {
 
 	}
 
